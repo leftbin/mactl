@@ -1,7 +1,7 @@
 package bootstrap
 
 import (
-	"github.com/plantoncloud/mactl/internal/bootstrap"
+	"github.com/leftbin/mactl/internal/bootstrap"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

@@ -3,8 +3,8 @@ package plugin
 import (
 	"fmt"
 	"github.com/pkg/errors"
-	golangenv "github.com/plantoncloud/mactl/internal/app/build/code/lang/golang/env"
-	"github.com/plantoncloud/mactl/internal/lib/shell"
+	golangenv "github.com/leftbin/mactl/internal/app/build/code/lang/golang/env"
+	"github.com/leftbin/mactl/internal/lib/shell"
 	"os"
 	"os/exec"
 )

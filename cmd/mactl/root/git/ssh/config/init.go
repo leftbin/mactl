@@ -3,7 +3,7 @@ package config
 import (
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
-	sshcon "github.com/plantoncloud/mactl/internal/git/ssh/config"
+	sshcon "github.com/leftbin/mactl/internal/git/ssh/config"
 )
 
 var Init = &cobra.Command{

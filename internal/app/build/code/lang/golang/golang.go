@@ -2,9 +2,9 @@ package golang
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/app/build/code/lang/golang/goland"
-	"github.com/plantoncloud/mactl/internal/app/build/code/lang/golang/protoc/plugin"
-	"github.com/plantoncloud/mactl/internal/installer/brew"
+	"github.com/leftbin/mactl/internal/app/build/code/lang/golang/goland"
+	"github.com/leftbin/mactl/internal/app/build/code/lang/golang/protoc/plugin"
+	"github.com/leftbin/mactl/internal/installer/brew"
 	log "github.com/sirupsen/logrus"
 )
 

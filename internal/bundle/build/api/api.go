@@ -2,10 +2,10 @@ package api
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/app/build/api/grpc/client/grpcurl"
-	"github.com/plantoncloud/mactl/internal/app/build/api/grpc/compiler/buf"
-	"github.com/plantoncloud/mactl/internal/app/build/api/grpc/compiler/protobuf"
-	"github.com/plantoncloud/mactl/internal/app/build/api/rest/client/postman"
+	"github.com/leftbin/mactl/internal/app/build/api/grpc/client/grpcurl"
+	"github.com/leftbin/mactl/internal/app/build/api/grpc/compiler/buf"
+	"github.com/leftbin/mactl/internal/app/build/api/grpc/compiler/protobuf"
+	"github.com/leftbin/mactl/internal/app/build/api/rest/client/postman"
 	log "github.com/sirupsen/logrus"
 )
 

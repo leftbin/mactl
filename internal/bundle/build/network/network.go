@@ -2,11 +2,11 @@ package network
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/app/build/network/dns/dnsmasq"
-	"github.com/plantoncloud/mactl/internal/app/build/network/stunnel"
-	"github.com/plantoncloud/mactl/internal/app/build/network/wget"
-	"github.com/plantoncloud/mactl/internal/app/network/step"
-	"github.com/plantoncloud/mactl/internal/app/network/telnet"
+	"github.com/leftbin/mactl/internal/app/build/network/dns/dnsmasq"
+	"github.com/leftbin/mactl/internal/app/build/network/stunnel"
+	"github.com/leftbin/mactl/internal/app/build/network/wget"
+	"github.com/leftbin/mactl/internal/app/network/step"
+	"github.com/leftbin/mactl/internal/app/network/telnet"
 	log "github.com/sirupsen/logrus"
 )
 

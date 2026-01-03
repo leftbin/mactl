@@ -2,7 +2,7 @@ package app
 
 import (
 	"github.com/spf13/cobra"
-	"github.com/plantoncloud/mactl/internal/app"
+	"github.com/leftbin/mactl/internal/app"
 )
 
 var List = &cobra.Command{

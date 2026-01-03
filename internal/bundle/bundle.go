@@ -4,13 +4,13 @@ import (
 	"github.com/jedib0t/go-pretty/v6/table"
 	lbnutil "github.com/leftbin/go-util/pkg/table"
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/bundle/audio"
-	"github.com/plantoncloud/mactl/internal/bundle/build"
-	"github.com/plantoncloud/mactl/internal/bundle/build/network"
-	"github.com/plantoncloud/mactl/internal/bundle/comm"
-	"github.com/plantoncloud/mactl/internal/bundle/hotkey"
-	"github.com/plantoncloud/mactl/internal/bundle/menubar"
-	"github.com/plantoncloud/mactl/internal/bundle/tool"
+	"github.com/leftbin/mactl/internal/bundle/audio"
+	"github.com/leftbin/mactl/internal/bundle/build"
+	"github.com/leftbin/mactl/internal/bundle/build/network"
+	"github.com/leftbin/mactl/internal/bundle/comm"
+	"github.com/leftbin/mactl/internal/bundle/hotkey"
+	"github.com/leftbin/mactl/internal/bundle/menubar"
+	"github.com/leftbin/mactl/internal/bundle/tool"
 )
 
 type Bundle string

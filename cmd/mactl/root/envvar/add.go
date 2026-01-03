@@ -2,8 +2,8 @@ package envvar
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/cli/clierr"
-	"github.com/plantoncloud/mactl/internal/envvar"
+	"github.com/leftbin/mactl/internal/cli/clierr"
+	"github.com/leftbin/mactl/internal/envvar"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

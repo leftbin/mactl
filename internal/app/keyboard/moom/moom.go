@@ -2,8 +2,8 @@ package moom
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/installer/mas"
-	"github.com/plantoncloud/mactl/internal/lib/plist"
+	"github.com/leftbin/mactl/internal/installer/mas"
+	"github.com/leftbin/mactl/internal/lib/plist"
 	log "github.com/sirupsen/logrus"
 )
 

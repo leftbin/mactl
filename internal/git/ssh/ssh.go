@@ -2,7 +2,7 @@ package ssh
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/git/ssh/config"
+	"github.com/leftbin/mactl/internal/git/ssh/config"
 	"os"
 	"path/filepath"
 )

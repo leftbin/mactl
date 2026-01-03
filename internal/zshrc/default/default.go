@@ -2,7 +2,7 @@ package _default
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/lib/shell"
+	"github.com/leftbin/mactl/internal/lib/shell"
 	"os"
 	"os/exec"
 	"path/filepath"

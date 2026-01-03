@@ -3,7 +3,7 @@ package ssh
 import (
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
-	"github.com/plantoncloud/mactl/internal/git/ssh"
+	"github.com/leftbin/mactl/internal/git/ssh"
 )
 
 var Init = &cobra.Command{

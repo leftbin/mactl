@@ -2,7 +2,7 @@ package root
 
 import (
 	"fmt"
-	"github.com/plantoncloud/mactl/internal/version"
+	"github.com/leftbin/mactl/internal/version"
 
 	"github.com/spf13/cobra"
 )

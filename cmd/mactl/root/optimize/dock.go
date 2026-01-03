@@ -1,7 +1,7 @@
 package optimize
 
 import (
-	"github.com/plantoncloud/mactl/internal/optimize/dock"
+	"github.com/leftbin/mactl/internal/optimize/dock"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

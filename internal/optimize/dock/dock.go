@@ -3,8 +3,8 @@ package dock
 import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
-	"github.com/plantoncloud/mactl/internal/lib/plist"
-	"github.com/plantoncloud/mactl/internal/lib/shell"
+	"github.com/leftbin/mactl/internal/lib/plist"
+	"github.com/leftbin/mactl/internal/lib/shell"
 	"os/exec"
 )
 

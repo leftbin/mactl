@@ -1,7 +1,7 @@
 package _default
 
 import (
-	_default "github.com/plantoncloud/mactl/internal/zshrc/default"
+	_default "github.com/leftbin/mactl/internal/zshrc/default"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

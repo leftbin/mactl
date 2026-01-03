@@ -3,8 +3,8 @@ package config
 import (
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
-	"github.com/plantoncloud/mactl/internal/cli/flag"
-	"github.com/plantoncloud/mactl/internal/git/config/inititialize"
+	"github.com/leftbin/mactl/internal/cli/flag"
+	"github.com/leftbin/mactl/internal/git/config/inititialize"
 )
 
 var Init = &cobra.Command{

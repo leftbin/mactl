@@ -2,9 +2,9 @@ package code
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/app/build/code/delta"
-	"github.com/plantoncloud/mactl/internal/bundle/build/code/editor"
-	"github.com/plantoncloud/mactl/internal/bundle/build/code/lang"
+	"github.com/leftbin/mactl/internal/app/build/code/delta"
+	"github.com/leftbin/mactl/internal/bundle/build/code/editor"
+	"github.com/leftbin/mactl/internal/bundle/build/code/lang"
 	log "github.com/sirupsen/logrus"
 )
 

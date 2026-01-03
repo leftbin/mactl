@@ -1,4 +1,4 @@
-module github.com/plantoncloud/mactl
+module github.com/leftbin/mactl
 
 go 1.18
 

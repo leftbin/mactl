@@ -3,7 +3,7 @@ package terraform
 import (
 	"github.com/leftbin/go-util/pkg/file"
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/installer/brew"
+	"github.com/leftbin/mactl/internal/installer/brew"
 	log "github.com/sirupsen/logrus"
 	"os"
 	"path/filepath"

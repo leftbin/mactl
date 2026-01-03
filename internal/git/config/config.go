@@ -7,7 +7,7 @@ import (
 	lbntable "github.com/leftbin/go-util/pkg/table"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
-	sshcon "github.com/plantoncloud/mactl/internal/git/ssh/config"
+	sshcon "github.com/leftbin/mactl/internal/git/ssh/config"
 	"os"
 	"path/filepath"
 	"text/template"

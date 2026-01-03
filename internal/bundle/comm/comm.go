@@ -2,7 +2,7 @@ package comm
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/app/comm/slack"
+	"github.com/leftbin/mactl/internal/app/comm/slack"
 	log "github.com/sirupsen/logrus"
 )
 

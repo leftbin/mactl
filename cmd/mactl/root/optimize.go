@@ -2,7 +2,7 @@ package root
 
 import (
 	"github.com/spf13/cobra"
-	"github.com/plantoncloud/mactl/cmd/mactl/root/optimize"
+	"github.com/leftbin/mactl/cmd/mactl/root/optimize"
 )
 
 var Optimize = &cobra.Command{

@@ -2,8 +2,8 @@ package battenberg
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/installer/brew"
-	"github.com/plantoncloud/mactl/internal/installer/pip"
+	"github.com/leftbin/mactl/internal/installer/brew"
+	"github.com/leftbin/mactl/internal/installer/pip"
 	log "github.com/sirupsen/logrus"
 )
 

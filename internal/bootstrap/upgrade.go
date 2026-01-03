@@ -2,14 +2,14 @@ package bootstrap
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/app/browser/chrome"
-	"github.com/plantoncloud/mactl/internal/app/build/terminal/iterm"
-	"github.com/plantoncloud/mactl/internal/app/installer/mas"
-	"github.com/plantoncloud/mactl/internal/app/keyboard/rectangle"
-	"github.com/plantoncloud/mactl/internal/bundle/build"
-	"github.com/plantoncloud/mactl/internal/bundle/hotkey"
-	"github.com/plantoncloud/mactl/internal/bundle/tool"
-	"github.com/plantoncloud/mactl/internal/optimize/dock"
+	"github.com/leftbin/mactl/internal/app/browser/chrome"
+	"github.com/leftbin/mactl/internal/app/build/terminal/iterm"
+	"github.com/leftbin/mactl/internal/app/installer/mas"
+	"github.com/leftbin/mactl/internal/app/keyboard/rectangle"
+	"github.com/leftbin/mactl/internal/bundle/build"
+	"github.com/leftbin/mactl/internal/bundle/hotkey"
+	"github.com/leftbin/mactl/internal/bundle/tool"
+	"github.com/leftbin/mactl/internal/optimize/dock"
 	log "github.com/sirupsen/logrus"
 )
 

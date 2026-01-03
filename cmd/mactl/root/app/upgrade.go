@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/plantoncloud/mactl/internal/app"
+	"github.com/leftbin/mactl/internal/app"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

@@ -1,7 +1,7 @@
 package zshrc
 
 import (
-	"github.com/plantoncloud/mactl/cmd/mactl/root/zshrc/override"
+	"github.com/leftbin/mactl/cmd/mactl/root/zshrc/override"
 	"github.com/spf13/cobra"
 )
 

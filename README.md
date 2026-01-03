@@ -5,7 +5,7 @@ cli to manage macbooks.
 ## install
 
 ```shell
-brew install plantoncloud/homebrew-tap/mactl
+brew install leftbin/homebrew-tap/mactl
 ```
 
 ## usage

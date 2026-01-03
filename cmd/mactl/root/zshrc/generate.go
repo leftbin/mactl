@@ -1,8 +1,8 @@
 package zshrc
 
 import (
-	"github.com/plantoncloud/mactl/internal/cli/flag"
-	"github.com/plantoncloud/mactl/internal/zshrc/generate"
+	"github.com/leftbin/mactl/internal/cli/flag"
+	"github.com/leftbin/mactl/internal/zshrc/generate"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

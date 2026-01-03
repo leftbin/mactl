@@ -2,9 +2,9 @@ package scm
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/app/build/scm/github"
-	"github.com/plantoncloud/mactl/internal/app/build/scm/gitr"
-	gitcon "github.com/plantoncloud/mactl/internal/git/config"
+	"github.com/leftbin/mactl/internal/app/build/scm/github"
+	"github.com/leftbin/mactl/internal/app/build/scm/gitr"
+	gitcon "github.com/leftbin/mactl/internal/git/config"
 	log "github.com/sirupsen/logrus"
 )
 

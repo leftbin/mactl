@@ -1,8 +1,8 @@
 package host
 
 import (
-	"github.com/plantoncloud/mactl/internal/cli/flag"
-	sshcon "github.com/plantoncloud/mactl/internal/git/ssh/config"
+	"github.com/leftbin/mactl/internal/cli/flag"
+	sshcon "github.com/leftbin/mactl/internal/git/ssh/config"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

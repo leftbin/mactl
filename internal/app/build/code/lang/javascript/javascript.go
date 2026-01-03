@@ -3,8 +3,8 @@ package javascript
 import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
-	"github.com/plantoncloud/mactl/internal/app/build/code/lang/javascript/nodejs"
-	"github.com/plantoncloud/mactl/internal/app/build/code/lang/javascript/webstorm"
+	"github.com/leftbin/mactl/internal/app/build/code/lang/javascript/nodejs"
+	"github.com/leftbin/mactl/internal/app/build/code/lang/javascript/webstorm"
 )
 
 func Setup() error {

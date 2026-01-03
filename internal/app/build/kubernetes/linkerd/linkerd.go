@@ -2,7 +2,7 @@ package linkerd
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/installer/brew"
+	"github.com/leftbin/mactl/internal/installer/brew"
 	log "github.com/sirupsen/logrus"
 )
 

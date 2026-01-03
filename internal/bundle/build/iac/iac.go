@@ -2,9 +2,9 @@ package iac
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/app/build/iac/packer"
-	"github.com/plantoncloud/mactl/internal/app/build/iac/pulumi"
-	"github.com/plantoncloud/mactl/internal/app/build/iac/terraform"
+	"github.com/leftbin/mactl/internal/app/build/iac/packer"
+	"github.com/leftbin/mactl/internal/app/build/iac/pulumi"
+	"github.com/leftbin/mactl/internal/app/build/iac/terraform"
 	log "github.com/sirupsen/logrus"
 )
 

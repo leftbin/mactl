@@ -4,7 +4,7 @@ import (
 	"github.com/kevinburke/ssh_config"
 	"github.com/leftbin/go-util/pkg/file"
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/git/ssh/config/host"
+	"github.com/leftbin/mactl/internal/git/ssh/config/host"
 	"os"
 	"path/filepath"
 	"strings"

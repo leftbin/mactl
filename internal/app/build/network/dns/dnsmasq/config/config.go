@@ -3,8 +3,8 @@ package config
 import (
 	"fmt"
 	"github.com/pkg/errors"
-	osint "github.com/plantoncloud/mactl/internal/lib/os"
-	"github.com/plantoncloud/mactl/internal/lib/shell"
+	osint "github.com/leftbin/mactl/internal/lib/os"
+	"github.com/leftbin/mactl/internal/lib/shell"
 	log "github.com/sirupsen/logrus"
 	"os/exec"
 	"regexp"

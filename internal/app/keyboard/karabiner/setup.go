@@ -2,9 +2,9 @@ package karabiner
 
 import (
 	"github.com/pkg/errors"
-	karabinerconfig "github.com/plantoncloud/mactl/internal/app/keyboard/karabiner/config"
-    "github.com/plantoncloud/mactl/internal/installer/brew"
-    "github.com/plantoncloud/mactl/internal/installer/macapp"
+	karabinerconfig "github.com/leftbin/mactl/internal/app/keyboard/karabiner/config"
+    "github.com/leftbin/mactl/internal/installer/brew"
+    "github.com/leftbin/mactl/internal/installer/macapp"
 )
 
 const (

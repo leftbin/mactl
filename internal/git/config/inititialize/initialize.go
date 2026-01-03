@@ -4,9 +4,9 @@ import (
 	"github.com/atotto/clipboard"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
-	gitconfig "github.com/plantoncloud/mactl/internal/git/config"
-	sshcon "github.com/plantoncloud/mactl/internal/git/ssh/config"
-	"github.com/plantoncloud/mactl/internal/git/ssh/key"
+	gitconfig "github.com/leftbin/mactl/internal/git/config"
+	sshcon "github.com/leftbin/mactl/internal/git/ssh/config"
+	"github.com/leftbin/mactl/internal/git/ssh/key"
 )
 
 func Do(host, workspace, username, email string) error {

@@ -2,9 +2,9 @@ package intellij
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/bundle/tool"
-	"github.com/plantoncloud/mactl/internal/installer/brew"
-	"github.com/plantoncloud/mactl/internal/installer/macapp"
+	"github.com/leftbin/mactl/internal/bundle/tool"
+	"github.com/leftbin/mactl/internal/installer/brew"
+	"github.com/leftbin/mactl/internal/installer/macapp"
 	log "github.com/sirupsen/logrus"
 	"os"
 	"path/filepath"

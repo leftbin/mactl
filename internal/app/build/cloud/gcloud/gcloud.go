@@ -2,8 +2,8 @@ package gcloud
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/installer/brew"
-	"github.com/plantoncloud/mactl/internal/lib/shell"
+	"github.com/leftbin/mactl/internal/installer/brew"
+	"github.com/leftbin/mactl/internal/lib/shell"
 	log "github.com/sirupsen/logrus"
 	"os/exec"
 	"runtime"

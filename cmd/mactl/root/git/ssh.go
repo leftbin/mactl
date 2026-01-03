@@ -2,8 +2,8 @@ package git
 
 import (
 	"github.com/spf13/cobra"
-	"github.com/plantoncloud/mactl/cmd/mactl/root/git/ssh"
-	"github.com/plantoncloud/mactl/internal/cli/flag"
+	"github.com/leftbin/mactl/cmd/mactl/root/git/ssh"
+	"github.com/leftbin/mactl/internal/cli/flag"
 )
 
 var Ssh = &cobra.Command{

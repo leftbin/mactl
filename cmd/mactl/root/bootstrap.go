@@ -2,7 +2,7 @@ package root
 
 import (
 	"github.com/spf13/cobra"
-	"github.com/plantoncloud/mactl/cmd/mactl/root/bootstrap"
+	"github.com/leftbin/mactl/cmd/mactl/root/bootstrap"
 )
 
 var Bootstrap = &cobra.Command{

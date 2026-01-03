@@ -1,6 +1,6 @@
 package main
 
-import mactl "github.com/plantoncloud/mactl/cmd"
+import mactl "github.com/leftbin/mactl/cmd"
 
 func main() {
 	mactl.Execute()

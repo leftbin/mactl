@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/plantoncloud/mactl/cmd/mactl/root/git/ssh/config/host"
+	"github.com/leftbin/mactl/cmd/mactl/root/git/ssh/config/host"
 	"github.com/spf13/cobra"
 )
 

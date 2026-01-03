@@ -3,8 +3,8 @@ package envvar
 import (
 	"fmt"
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/lib/shell"
-	"github.com/plantoncloud/mactl/internal/zshrc/override"
+	"github.com/leftbin/mactl/internal/lib/shell"
+	"github.com/leftbin/mactl/internal/zshrc/override"
 	"os/exec"
 )
 

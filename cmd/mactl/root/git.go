@@ -1,7 +1,7 @@
 package root
 
 import (
-	"github.com/plantoncloud/mactl/cmd/mactl/root/git"
+	"github.com/leftbin/mactl/cmd/mactl/root/git"
 	"github.com/spf13/cobra"
 )
 

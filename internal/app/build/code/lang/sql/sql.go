@@ -2,7 +2,7 @@ package sql
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/app/build/code/lang/sql/datagrip"
+	"github.com/leftbin/mactl/internal/app/build/code/lang/sql/datagrip"
 	log "github.com/sirupsen/logrus"
 )
 

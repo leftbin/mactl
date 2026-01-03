@@ -3,8 +3,8 @@ package key
 import (
 	"fmt"
 	"github.com/atotto/clipboard"
-	"github.com/plantoncloud/mactl/internal/cli/flag"
-	"github.com/plantoncloud/mactl/internal/git/ssh/key"
+	"github.com/leftbin/mactl/internal/cli/flag"
+	"github.com/leftbin/mactl/internal/git/ssh/key"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

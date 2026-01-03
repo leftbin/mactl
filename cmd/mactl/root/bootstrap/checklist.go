@@ -2,7 +2,7 @@ package bootstrap
 
 import (
 	"github.com/spf13/cobra"
-	"github.com/plantoncloud/mactl/internal/bootstrap"
+	"github.com/leftbin/mactl/internal/bootstrap"
 )
 
 var Checklist = &cobra.Command{

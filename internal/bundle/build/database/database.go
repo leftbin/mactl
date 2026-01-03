@@ -2,8 +2,8 @@ package database
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/app/build/database/kcat"
-	"github.com/plantoncloud/mactl/internal/app/build/database/postgresql"
+	"github.com/leftbin/mactl/internal/app/build/database/kcat"
+	"github.com/leftbin/mactl/internal/app/build/database/postgresql"
 	log "github.com/sirupsen/logrus"
 )
 

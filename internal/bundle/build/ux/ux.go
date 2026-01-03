@@ -2,7 +2,7 @@ package ux
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/app/build/ux/figma"
+	"github.com/leftbin/mactl/internal/app/build/ux/figma"
 	log "github.com/sirupsen/logrus"
 )
 

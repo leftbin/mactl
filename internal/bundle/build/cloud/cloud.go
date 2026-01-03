@@ -2,8 +2,8 @@ package cloud
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/app/build/cloud/awscli"
-	"github.com/plantoncloud/mactl/internal/app/build/cloud/gcloud"
+	"github.com/leftbin/mactl/internal/app/build/cloud/awscli"
+	"github.com/leftbin/mactl/internal/app/build/cloud/gcloud"
 	log "github.com/sirupsen/logrus"
 )
 

@@ -3,7 +3,7 @@ package mas
 import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
-	"github.com/plantoncloud/mactl/internal/installer/brew"
+	"github.com/leftbin/mactl/internal/installer/brew"
 )
 
 const (

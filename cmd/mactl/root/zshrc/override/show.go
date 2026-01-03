@@ -2,7 +2,7 @@ package override
 
 import (
 	"fmt"
-	"github.com/plantoncloud/mactl/internal/zshrc/override"
+	"github.com/leftbin/mactl/internal/zshrc/override"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

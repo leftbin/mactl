@@ -1,7 +1,7 @@
 package bundle
 
 import (
-	"github.com/plantoncloud/mactl/internal/bundle"
+	"github.com/leftbin/mactl/internal/bundle"
 	"github.com/spf13/cobra"
 )
 

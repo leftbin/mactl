@@ -1,8 +1,8 @@
 package git
 
 import (
-	"github.com/plantoncloud/mactl/cmd/mactl/root/git/config"
-	"github.com/plantoncloud/mactl/internal/cli/flag"
+	"github.com/leftbin/mactl/cmd/mactl/root/git/config"
+	"github.com/leftbin/mactl/internal/cli/flag"
 	"github.com/spf13/cobra"
 )
 

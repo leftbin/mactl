@@ -2,9 +2,9 @@ package mactl
 
 import (
 	"fmt"
-	"github.com/plantoncloud/mactl/cmd/mactl/root"
-	"github.com/plantoncloud/mactl/internal/cli/flag"
-	intos "github.com/plantoncloud/mactl/internal/lib/os"
+	"github.com/leftbin/mactl/cmd/mactl/root"
+	"github.com/leftbin/mactl/internal/cli/flag"
+	intos "github.com/leftbin/mactl/internal/lib/os"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"os"

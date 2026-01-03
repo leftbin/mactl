@@ -1,7 +1,7 @@
 package host
 
 import (
-	"github.com/plantoncloud/mactl/internal/git/ssh/config/host"
+	"github.com/leftbin/mactl/internal/git/ssh/config/host"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

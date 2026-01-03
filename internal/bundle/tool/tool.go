@@ -3,9 +3,9 @@ package tool
 import (
 	"github.com/leftbin/go-util/pkg/file"
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/app/tool/flux"
-	"github.com/plantoncloud/mactl/internal/app/tool/flycut"
-	"github.com/plantoncloud/mactl/internal/app/tool/snagit"
+	"github.com/leftbin/mactl/internal/app/tool/flux"
+	"github.com/leftbin/mactl/internal/app/tool/flycut"
+	"github.com/leftbin/mactl/internal/app/tool/snagit"
 	log "github.com/sirupsen/logrus"
 	"os"
 	"path/filepath"

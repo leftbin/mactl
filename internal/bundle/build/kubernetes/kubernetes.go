@@ -2,16 +2,16 @@ package kubernetes
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/app/build/kubernetes/helm"
-	"github.com/plantoncloud/mactl/internal/app/build/kubernetes/istioctl"
-	"github.com/plantoncloud/mactl/internal/app/build/kubernetes/k9s"
-	"github.com/plantoncloud/mactl/internal/app/build/kubernetes/kind"
-	"github.com/plantoncloud/mactl/internal/app/build/kubernetes/kubectl"
-	"github.com/plantoncloud/mactl/internal/app/build/kubernetes/kubectx"
-	"github.com/plantoncloud/mactl/internal/app/build/kubernetes/kustomize"
-	"github.com/plantoncloud/mactl/internal/app/build/kubernetes/linkerd"
-	"github.com/plantoncloud/mactl/internal/app/build/kubernetes/stern"
-	"github.com/plantoncloud/mactl/internal/app/build/kubernetes/tilt"
+	"github.com/leftbin/mactl/internal/app/build/kubernetes/helm"
+	"github.com/leftbin/mactl/internal/app/build/kubernetes/istioctl"
+	"github.com/leftbin/mactl/internal/app/build/kubernetes/k9s"
+	"github.com/leftbin/mactl/internal/app/build/kubernetes/kind"
+	"github.com/leftbin/mactl/internal/app/build/kubernetes/kubectl"
+	"github.com/leftbin/mactl/internal/app/build/kubernetes/kubectx"
+	"github.com/leftbin/mactl/internal/app/build/kubernetes/kustomize"
+	"github.com/leftbin/mactl/internal/app/build/kubernetes/linkerd"
+	"github.com/leftbin/mactl/internal/app/build/kubernetes/stern"
+	"github.com/leftbin/mactl/internal/app/build/kubernetes/tilt"
 	log "github.com/sirupsen/logrus"
 )
 

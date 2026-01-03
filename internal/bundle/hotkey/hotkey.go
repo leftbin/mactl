@@ -3,7 +3,7 @@ package hotkey
 import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
-	"github.com/plantoncloud/mactl/internal/app/keyboard/karabiner"
+	"github.com/leftbin/mactl/internal/app/keyboard/karabiner"
 )
 
 func Install() error {

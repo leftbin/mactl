@@ -2,12 +2,12 @@ package mactl
 
 import (
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/mactl/internal/installer/brew"
+	"github.com/leftbin/mactl/internal/installer/brew"
 	log "github.com/sirupsen/logrus"
 )
 
 const (
-	BrewPkg = "plantoncloud/homebrew-tap/mactl"
+	BrewPkg = "leftbin/homebrew-tap/mactl"
 )
 
 func Setup() error {

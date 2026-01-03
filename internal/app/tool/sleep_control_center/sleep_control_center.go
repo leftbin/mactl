@@ -3,8 +3,8 @@ package sleep_control_center
 import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
-	"github.com/plantoncloud/mactl/internal/installer/macapp"
-	"github.com/plantoncloud/mactl/internal/installer/mas"
+	"github.com/leftbin/mactl/internal/installer/macapp"
+	"github.com/leftbin/mactl/internal/installer/mas"
 )
 
 const (
