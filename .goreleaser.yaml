@@ -1,0 +1,76 @@
+version: 2
+
+project_name: mactl
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: mactl
+    main: .
+    binary: mactl
+    ldflags:
+      - -s -w -X github.com/leftbin/mactl/internal/version.Version={{.Version}}
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+
+archives:
+  - id: default
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    formats:
+      - tar.gz
+
+checksum:
+  name_template: "{{ .ProjectName }}_{{ .Version }}_checksums.txt"
+
+release:
+  github:
+    owner: leftbin
+    name: mactl
+
+homebrew_casks:
+  - name: mactl
+    repository:
+      owner: leftbin
+      name: homebrew-tap
+      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
+    homepage: https://github.com/leftbin/mactl
+    description: "mactl: CLI to quickly bootstrap macbooks"
+    binaries:
+      - mactl
+    hooks:
+      post:
+        install: |
+          if OS.mac?
+            system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/mactl"]
+          end
+    caveats: |
+      Installation Complete!
+
+      mactl helps you quickly bootstrap and configure macOS machines.
+
+      Quick Start
+
+      1. Bootstrap your Mac with essential tools:
+         mactl bootstrap run
+
+      2. List available apps:
+         mactl app list
+
+      3. Add an app:
+         mactl app add <app-name>
+
+      4. Configure git:
+         mactl git config init
+
+      For more commands, run:
+         mactl --help
+
+      Documentation: https://github.com/leftbin/mactl
+
