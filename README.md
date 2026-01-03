@@ -5,7 +5,7 @@ cli to manage macbooks.
 ## install
 
 ```shell
-brew install leftbin/homebrew-tap/mactl
+brew install leftbin/tap/mactl
 ```
 
 ## usage
