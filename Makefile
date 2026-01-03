@@ -1,60 +1,88 @@
-version?=v0.0.17
-name=mactl
-name_local=mactl
-pkg=github.com/leftbin/mactl
-build_dir=build
-LDFLAGS=-ldflags "-X ${pkg}/internal/version.Version=${version}"
-build_cmd=go build -v ${LDFLAGS}
+# ── project metadata ────────────────────────────────────────────────────────────
+name        := mactl
+pkg         := github.com/leftbin/mactl
+build_dir   := build
+LDFLAGS     := -ldflags "-X $(pkg)/internal/version.Version=$$(git describe --tags --always --dirty)"
 
-.PHONY: deps
-deps:
+# ── helper vars ────────────────────────────────────────────────────────────────
+build_cmd   := go build -v $(LDFLAGS)
+
+# bump: major, minor, or patch (default)
+bump ?= patch
+
+# ── quality / housekeeping ─────────────────────────────────────────────────────
+.PHONY: deps vet fmt test clean
+deps:          ## download & tidy modules
 	go mod download
+	go mod tidy
 
-.PHONY: build
-build: ${build_dir}/${name}
-
-${build_dir}/${name}: deps
-	GOOS=darwin ${build_cmd} -o ${build_dir}/${name}-darwin .
-	GOOS=darwin GOARCH=amd64 ${build_cmd} -o ${build_dir}/${name}-darwin-amd64 .
-	openssl dgst -sha256 ${build_dir}/${name}-darwin-amd64
-	GOOS=darwin GOARCH=arm64 ${build_cmd} -o ${build_dir}/${name}-darwin-arm64 .
-	openssl dgst -sha256 ${build_dir}/${name}-darwin-arm64
-.PHONY: test
-test:
-	go test -race -v -count=1 ./...
-
-.PHONY: run
-run: build
-	${build_dir}/${name}
-
-.PHONY: vet
-vet:
+vet:           ## go vet
 	go vet ./...
 
-.PHONY: fmt
-fmt:
+fmt:           ## go fmt
 	go fmt ./...
 
-.PHONY: clean
-clean:
-	rm -rf ${build_dir}
+test: vet      ## run tests with race detector
+	go test -race -v -count=1 ./...
 
-checksum:
-	@openssl dgst -sha256 ${build_dir}/${name}-darwin
+clean:         ## remove build artifacts
+	rm -rf $(build_dir)
 
-local: build
-	sudo rm -f /usr/local/bin/${name_local}
-	sudo cp ./${build_dir}/${name}-darwin /usr/local/bin/${name_local}
-	sudo chmod +x /usr/local/bin/${name_local}
+# ── build ─────────────────────────────────────────────────────────────────────
+.PHONY: build build_darwin
+build_darwin: deps fmt vet
+	GOOS=darwin $(build_cmd) -o $(build_dir)/$(name)-darwin .
 
-.PHONY: release-github
-release-github:
-	git tag ${version}
-	git push origin ${version}
-	gh release create ${version} \
-		 --generate-notes \
-         --title ${version} \
-         build/mactl-darwin-amd64 \
-         build/mactl-darwin-arm64
+build: deps fmt vet ## build CLI binaries (darwin only)
+	GOOS=darwin GOARCH=amd64 $(build_cmd) -o $(build_dir)/$(name)-darwin-amd64 .
+	GOOS=darwin GOARCH=arm64 $(build_cmd) -o $(build_dir)/$(name)-darwin-arm64 .
+	openssl dgst -sha256 $(build_dir)/$(name)-darwin-amd64
+	openssl dgst -sha256 $(build_dir)/$(name)-darwin-arm64
 
-release: build release-github
+# ── local utility ──────────────────────────────────────────────────────────────
+.PHONY: snapshot local
+snapshot: deps ## build a local snapshot using GoReleaser
+	goreleaser release --snapshot --clean --skip=publish
+
+local: build_darwin ## build and install binary to /usr/local/bin
+	sudo rm -f /usr/local/bin/$(name)
+	sudo cp ./$(build_dir)/$(name)-darwin /usr/local/bin/$(name)
+	sudo chmod +x /usr/local/bin/$(name)
+
+# ── release tagging ────────────────────────────────────────────────────────────
+.PHONY: release build-check next-version
+build-check:   ## quick compile to verify build
+	go build -o /dev/null .
+
+next-version:  ## show what the next version would be
+	@latest=$$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0"); \
+	major=$$(echo $$latest | sed 's/v//' | cut -d. -f1); \
+	minor=$$(echo $$latest | sed 's/v//' | cut -d. -f2); \
+	patch=$$(echo $$latest | sed 's/v//' | cut -d. -f3); \
+	case "$(bump)" in \
+		major) major=$$((major + 1)); minor=0; patch=0 ;; \
+		minor) minor=$$((minor + 1)); patch=0 ;; \
+		patch) patch=$$((patch + 1)) ;; \
+		*) echo "Invalid bump type: $(bump). Use major, minor, or patch"; exit 1 ;; \
+	esac; \
+	echo "v$$major.$$minor.$$patch"
+
+release: test build-check ## auto-bump version, tag & push (bump=major|minor|patch, default: patch)
+	@latest=$$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0"); \
+	major=$$(echo $$latest | sed 's/v//' | cut -d. -f1); \
+	minor=$$(echo $$latest | sed 's/v//' | cut -d. -f2); \
+	patch=$$(echo $$latest | sed 's/v//' | cut -d. -f3); \
+	case "$(bump)" in \
+		major) major=$$((major + 1)); minor=0; patch=0 ;; \
+		minor) minor=$$((minor + 1)); patch=0 ;; \
+		patch) patch=$$((patch + 1)) ;; \
+		*) echo "Invalid bump type: $(bump). Use major, minor, or patch"; exit 1 ;; \
+	esac; \
+	version="v$$major.$$minor.$$patch"; \
+	echo "Current version: $$latest"; \
+	echo "Releasing: $$version ($(bump) bump)"; \
+	git tag -a $$version -m "$$version"; \
+	git push origin $$version
+
+# ── default target ─────────────────────────────────────────────────────────────
+.DEFAULT_GOAL := test
