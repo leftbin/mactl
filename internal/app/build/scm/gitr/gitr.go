@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	BrewPkg        = "leftbin/homebrew-tap/gitr"
+	BrewPkg        = "swarupdonepudi/tap/gitr"
 	ConfigFileName = ".gitr.yaml"
 )
 
@@ -20,7 +20,7 @@ type ConfigTemplateInput struct {
 
 func Setup() error {
 	log.Infof("installing gitr")
-	if err := brew.Install(BrewPkg); err != nil {
+	if err := brew.InstallCask(BrewPkg); err != nil {
 		return errors.Wrapf(err, "failed to install %s pkg using brew", BrewPkg)
 	}
 	log.Infof("installed gitr")
@@ -34,7 +34,7 @@ func Setup() error {
 
 func Upgrade() error {
 	log.Infof("upgrading gitr")
-	if err := brew.Upgrade(BrewPkg); err != nil {
+	if err := brew.UpgradeCask(BrewPkg); err != nil {
 		return errors.Wrapf(err, "failed to upgrade %s pkg using brew", BrewPkg)
 	}
 	log.Infof("upgraded gitr")

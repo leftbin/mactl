@@ -53,23 +53,19 @@ func Checklist() {
 func Run() error {
 	log.Info("bootstrap started")
 
-	done := make(chan bool)
-	fatalErrors := make(chan error)
+	fatalErrors := make(chan error, 1)
 	if err := ensure(fatalErrors); err != nil {
-		fatalErrors <- errors.Wrap(err, "failed to ensure all bootstrap components")
+		return errors.Wrap(err, "failed to ensure all bootstrap components")
 	}
 	if err := open(fatalErrors); err != nil {
-		fatalErrors <- errors.Wrap(err, "failed to open all apps installed as part of bootstrap")
+		return errors.Wrap(err, "failed to open all apps installed as part of bootstrap")
 	}
 
-	close(done)
 	select {
-	case <-done:
-		break
 	case err := <-fatalErrors:
-		close(fatalErrors)
 		log.Warnf("Error encountered : %v", err.Error())
 		return err
+	default:
 	}
 
 	log.Info("bootstrap completed")
